@@ -1,4 +1,5 @@
-﻿using System.Net.Http.Headers;
+﻿using System.Net;
+using System.Net.Http.Headers;
 
 using System.Security.Cryptography;
 using Newtonsoft.Json;
@@ -59,7 +60,7 @@ public class OfdClient
         var source = "market";
         string dt = DateTime.UtcNow.GetDateTimeFormats('r')[0];
         var auth = Auth(dt, source);
-        //ServicePointManager.ServerCertificateValidationCallback = CheckValidationResult;
+        ServicePointManager.ServerCertificateValidationCallback = (_, _, _, _) => false;
         client.DefaultRequestHeaders.Authorization = AuthenticationHeaderValue.Parse(auth);
         client.DefaultRequestHeaders.Add("X-Source", source);
         client.DefaultRequestHeaders.Add("X-Date", dt);
@@ -71,7 +72,7 @@ public class OfdClient
 
     private string Auth(string dt, string source)
     {
-        string signStr = $"x-date: {dt}\n" + $"x-source: {source}";
+        string signStr = $"x-date: {dt}\nx-source: {source}";
         string sign = HmacSha1Text(signStr, _secretKey);
 
         string auth = $"hmac id=\"{_secretId}\", algorithm=\"hmac-sha1\", headers=\"x-date x-source\", signature=\"";

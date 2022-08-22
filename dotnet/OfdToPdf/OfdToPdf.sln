@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfdToPdf", "OfdToPdf.csproj", "{9D757EAF-81F0-48DC-B5C9-84AE0815CD97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWinForm", "..\TestWinForm\TestWinForm.csproj", "{F10BBF0E-5925-49C7-BF9B-5F7BEECA7913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9D757EAF-81F0-48DC-B5C9-84AE0815CD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D757EAF-81F0-48DC-B5C9-84AE0815CD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D757EAF-81F0-48DC-B5C9-84AE0815CD97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F10BBF0E-5925-49C7-BF9B-5F7BEECA7913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F10BBF0E-5925-49C7-BF9B-5F7BEECA7913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F10BBF0E-5925-49C7-BF9B-5F7BEECA7913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F10BBF0E-5925-49C7-BF9B-5F7BEECA7913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
